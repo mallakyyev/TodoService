@@ -5,6 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="TodoBAL\**" />
+    <Compile Remove="TodoDAL\**" />
+    <Content Remove="TodoBAL\**" />
+    <Content Remove="TodoDAL\**" />
+    <EmbeddedResource Remove="TodoBAL\**" />
+    <EmbeddedResource Remove="TodoDAL\**" />
+    <None Remove="TodoBAL\**" />
+    <None Remove="TodoDAL\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
@@ -19,11 +30,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TodoBAL\TodoBAL.csproj" />
+    <Folder Include="Logs\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Logs\" />
+    <ProjectReference Include="TodoBAL\TodoBAL.csproj" />
+    <ProjectReference Include="TodoDAL\TodoDAL.csproj" />
   </ItemGroup>
 
 
